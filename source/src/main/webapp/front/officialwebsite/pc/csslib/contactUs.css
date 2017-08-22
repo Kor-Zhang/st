@@ -1,0 +1,156 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: black;
+	font-family: "Microsoft YaHei";
+	margin: 0px 0px;
+	padding: 0px 0px;
+	
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+
+}
+
+/******************联系我们*****************/
+#contactUs{
+	width: 100%;
+	height: 100%;
+	background: rgb(18,18,18);
+}
+#contactUs *{
+	color: white;
+	text-decoration: none;
+}
+	
+#contactUs_center{
+	width:50%;
+	height:100%;
+	margin-left: 25%;
+}
+#contactUs_title{
+	font-size: 33px;
+	
+}
+
+#contactUs_address{
+	margin-top:30px;
+	border: 1px solid white;
+}
+#contactUs_address_city{
+	margin:20px 20px;
+	font-size: 23px;
+}
+#contactUs_address_info{
+	margin:20px 20px;
+	font-size: 15px;
+}
+/*建议*/
+#contactUs_advice{
+	
+	width:100%;
+	margin-top:40px;
+}
+#contactUs_advice>div{
+	margin:15px 0px;
+}
+#contactUs_advice_tip{
+}
+
+/***填写的内容***/
+#contactUs_advice_content{
+	height:200px;
+	width:100%;
+	
+}
+#contactUs_advice_content div{
+	float: left;
+	width:50%;
+	color:black;
+	
+	
+}
+/**左边内容**/
+#contactUs_advice_left>input{
+	display: block;
+	width:80%;
+	height:25px;
+	margin-bottom: 20px;
+	color:black;
+	
+	/* 可以选中 */
+	-moz-user-select: text ;
+	-webkit-user-select: text ;
+	-ms-user-select: text ;
+	-khtml-user-select: text ;
+	user-select:text 
+}
+#contactUs_advice_right>textarea{
+	color:black;
+	width:100%;
+	height:220px;
+	resize:none;
+	
+	/* 可以选中 */
+	-moz-user-select: text ;
+	-webkit-user-select: text ;
+	-ms-user-select: text ;
+	-khtml-user-select: text ;
+	user-select:text 
+}
+/*提交按钮*/
+#contactUs_advice_submitBtnDiv{
+	width:100%;
+	
+}
+#contactUs_advice_submitBtn{
+	background: rgb(18,18,18);
+	color: white;
+	width:140px;
+	height:40px;
+	border: 2px solid white;
+	cursor: pointer;
+}
+#contactUs_advice_submitBtn:hover{
+	
+	color: rgb(18,18,18);
+	background: white;
+}
+.clear{
+	clear: both;
+}
+
+/*****************************************************响应式*****************************************************/
+/* x<=767的设备 */
+@media screen and (max-width : 767px) { 
+	
+	/******************联系我们*****************/
+}
+/* 991>=x>=768的设备 */
+@media screen and ( min-width : 768px) and (max-width : 991px) { 
+	
+	/******************联系我们*****************/
+	#contactUs_title{
+		font-size: 27px;
+		
+	}
+}
+
+
+/* 1199>=x>=992的设备 */
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	
+	/******************联系我们*****************/
+}
+
+
+
+/* x>=1200的设备 */
+@media screen and ( min-width : 1200px) {
+	/******************联系我们*****************/
+	
+}
+
+

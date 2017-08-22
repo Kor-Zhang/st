@@ -1,0 +1,148 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: black;
+	font-family: "Microsoft YaHei";
+	margin: 0px 0px;
+	padding: 0px 0px;
+	text-decoration: none;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+/******************新闻详情信息*****************/
+#membersDetail{
+	width: 100%;
+	height: 100%;
+	background:white;
+}
+#membersDetail>div{
+	float: left;
+	height:100%;
+}
+
+/***左部***/
+#membersDetail_left{
+	width:35%;
+	/* 新闻内容超过，允许滚动条 */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/**位置导航**/
+#membersDetail_position{
+	background: rgb(240,240,240);
+	height:35px;
+	padding-left: 15px;
+	line-height: 35px;
+}
+#membersDetail_position>span{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#membersDetail_position>#up{
+	font-style: italic;
+}	
+
+/**翻页**/
+
+#membersDetail_changePage{
+	background: rgb(212,212,212);
+	height:60px;
+	line-height: 60px;
+}
+#membersDetail_changePage>span{
+	font-size: 22px;
+	font-weight: lighter;
+}
+#membersDetail_changePage>#nextPage{
+	float: right;
+	margin-right: 18px;
+}
+#membersDetail_changePage>#prePage{
+	float: left;
+	margin-left: 18px;
+}
+
+/**具体内容**/
+#membersDetail_content{
+	background: white;
+	width:80%;
+	margin-left: 10%;
+	text-align: center;
+	margin-bottom: 40px;
+	
+}
+#membersDetail_content>div{
+	text-align: center;
+	width:100%;
+	margin-top:20px;
+	font-size: 22px;
+	border-bottom: 1px solid gray;
+	font-weight: lighter;	
+	background: white;
+}
+#membersDetail_content>#membersDetail_name{
+	font-size: 33px;
+}
+
+#membersDetail_content>#membersDetail_text{
+	font-size: 17px;
+	
+}
+/***右部***/
+#membersDetail_right{
+	width:65%;
+	overflow: hidden;
+}
+#membersDisplayImg{
+	width:100%;
+	height:100%;
+}
+/*****************************************************响应式*****************************************************/
+/* x<=767的设备 */
+@media screen and (max-width : 767px) { 
+	
+	/******************新闻详情信息*****************/
+
+}
+/* 991>=x>=768的设备 */
+@media screen and ( min-width : 768px) and (max-width : 991px) { 
+	
+	/******************新闻详情信息*****************/
+	#membersDetail_changePage>span{
+		font-size: 16px;
+	}
+	#membersDetail_content>div{
+		font-size: 17px;
+	}
+	#membersDetail_content>#membersDetail_name{
+		font-size: 22px;
+	}
+	
+	#membersDetail_content>#membersDetail_text{
+		font-size: 15px;
+		
+	}
+}
+
+
+/* 1199>=x>=992的设备 */
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	
+	/******************新闻详情信息*****************/
+	
+}
+
+
+
+/* x>=1200的设备 */
+@media screen and ( min-width : 1200px) {
+	/******************新闻详情信息*****************/
+	
+
+}

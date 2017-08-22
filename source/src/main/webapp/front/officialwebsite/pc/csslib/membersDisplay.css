@@ -1,0 +1,245 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: black;
+	font-family: "Microsoft YaHei";
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+/******************成员*****************/
+#membersDisplay {
+	width: 100%;
+	height: 100%;
+}
+
+#membersDisplay>div {
+	height: 100%;
+	float: left;
+}
+
+/**左边**/
+#membersDisplay_left {
+	width: 30%;
+	background: white;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+/*位置导航*/
+#membersDisplay_positionNav {
+	background: rgb(229, 229, 229);
+	height: 35px;
+	padding-left: 15px;
+	line-height: 35px;
+}
+
+#membersDisplay_positionNav>span {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#membersDisplay_positionNav>#up {
+	font-style: italic;
+}
+/**具体内容**/
+#members_content {
+	background: white;
+	width: 90%;
+	margin-left: 5%;
+	text-align: center;
+}
+
+#members_content>div {
+	text-align: center;
+	width: 100%;
+	font-weight: lighter; margin-top : 40px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+	padding-bottom: 40px;
+	margin-top: 40px;
+}
+
+#members_content>#membersDetail_title {
+	font-size: 42px;
+	text-align: left;
+	color: gray;
+	padding-bottom: 20px;
+}
+
+#members_content>#membersDetail_text {
+	font-size: 14px;
+}
+/*条件筛选*/
+/* #members_content>#membersDetail_filter {
+	font-size: 14px;
+	margin-top: 0px;
+	border-bottom: 0px solid rgb(229, 229, 229);
+	padding-bottom: 0px;
+	margin-bottom: 40px;
+}
+ */
+#membersDetail_filter>.membersFiler_Items {
+	border-bottom: 1px solid rgb(229, 229, 229);
+	text-align: left;
+	margin: 10px 0px;
+}
+.membersFiler_Items>.membersFilterName:hover{
+	background: rgb(229, 229, 229)
+
+}
+.membersFiler_Items>.membersFilterName{
+	cursor: pointer;
+
+}
+.membersFiler_Items>.membersFilterName * {
+	font-size: 18px;
+	color: rgb(91, 91, 91);
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.membersFilterName>.status {
+	font-size: 12px;
+	color: gray;
+}
+
+.membersFiler_Items>.membersFilterConditionDiv * {
+	font-size: 14px;
+	font-style: italic;
+	color: gray;
+}
+
+.membersFilterConditions {
+	margin: 10px 0px;
+	margin-left: 25px;
+}
+/**右边**/
+#membersDisplay_right {
+	width: 70%;
+	background: white;
+}
+/*成员列表*/
+
+#membersUl{
+	position:relative;
+	top:0px;
+	left:0px;
+	list-style:none;
+	width:100%;
+	height:100%;
+	/* background: red; */
+}
+.membersLi{
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+	height:100%;
+	cursor: pointer;
+	/* background:red;	 */
+}
+.membersLiImg{
+	position: absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	z-index: 1px;
+}
+.membersLiModel{
+	position: absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	z-index: 2px;
+	/* 默认隐藏 */
+	display: none;
+}
+.membersLiModel:hover{
+	
+	display: block;
+}
+.eye{
+	background: url(../imgslib/icons/eye.png) no-repeat 100%;
+	background-position:center;
+	background-color: rgba(0,0,0,0.5);
+}
+/*****************************************************响应式*****************************************************/
+/* x<=767的设备 */
+@media screen and (max-width : 767px) {
+	/******************成员*****************/
+}
+/* 991>=x>=768的设备 */
+@media screen and ( min-width : 768px) and (max-width : 991px) { 
+	
+	/******************新闻业务*****************/
+	#members_content>#membersDetail_title {
+		font-size: 29px;
+	}
+
+	#members_content>#membersDetail_text {
+		font-size: 14px;
+	}
+	
+	.membersFiler_Items>.membersFilterName * {
+		font-size: 16px;
+	}
+	.membersFiler_Items>.membersFilterConditionDiv * {
+		font-size: 12px;
+	}
+	
+	
+	
+	
+}
+
+
+/* 1199>=x>=992的设备 */
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	
+	/******************成员*****************/
+	#members_content>#membersDetail_title {
+		font-size: 32px;
+	}
+
+	#members_content>#membersDetail_text {
+		font-size: 16px;
+	}
+}
+
+/* x>=1200的设备 */
+@media screen and ( min-width : 1200px) {
+	/******************成员*****************/
+}
+
+
+
+/**复选框样式***/
+#membersDisplay .membersCheckBox{
+  display: none;
+  cursor: pointer;
+}
+
+#membersDisplay label{
+  	cursor: pointer;
+	display:block;
+	padding-left:20px;
+	width : 100%; 
+	height : 15px;
+	line-height:14px;
+	background: url(../imgslib/icons/unchecked.png) no-repeat ;
+}
+
+#membersDisplay .membersCheckBox:checked+label{
+	color: black; 
+	background: url(../imgslib/icons/checked.png) no-repeat;
+	font-weight: bolder;
+	font-style: normal;
+}
+
+

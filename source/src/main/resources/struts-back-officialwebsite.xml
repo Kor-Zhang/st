@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- officialwebsite后台模块包 -->
+	<package name="owBackPackage" namespace="/back/ow" extends="backPackage">
+		<interceptors> 
+			
+			<!-- 配置栈 -->
+			<interceptor-stack name="owBackInterceptorStack">
+				<!--配置内建默认拦截器-->
+				<interceptor-ref name="backInterceptorStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 全局拦截栈 -->
+		<default-interceptor-ref name="owBackInterceptorStack"></default-interceptor-ref>
+		
+		
+		<!-- 配置上传首页轮播的action -->
+		<action name="owAboutUsUploadBackAction" class="com.st.back.officialwebsite.action.OwAboutUsUploadBackAction" method="uploadAboutUs">
+			<!-- 上传 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 配置允许上传文件的类型,如果有多个类型用","隔开 
+	            <param name="fileUpload.allowedTypes">application/vnd.ms-excel,text/plain</param>   -->
+	            <!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 配置更新首页轮播的action -->
+		<action name="owAboutUsUpdateBackAction" class="com.st.back.officialwebsite.action.OwAboutUsUpdateBackAction" method="updateAboutUs">
+			<!-- 更新 -->
+			<interceptor-ref name="fileUpload">
+				<!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 配置更新成员的action -->
+		<action name="owMembersUpdateBackAction" class="com.st.back.officialwebsite.action.OwMembersUpdateBackAction" method="updateMemebers">
+			<!-- 更新 -->
+			<interceptor-ref name="fileUpload">
+				<!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 配置上传成员的action -->
+		<action name="owMembersUploadBackAction" class="com.st.back.officialwebsite.action.OwMembersUploadBackAction" method="uploadMemebers">
+			<!-- 更新 -->
+			<interceptor-ref name="fileUpload">
+				<!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 配置上传新闻图片的action -->
+		<action name="owNewsUploadImgsBackAction" class="com.st.back.officialwebsite.action.OwNewsUploadImgsBackAction" method="uploadNewsImgs">
+			<!-- 更新 -->
+			<interceptor-ref name="fileUpload">
+				<!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 配置上传业务图片的action -->
+		<action name="owServiceUploadImgsBackAction" class="com.st.back.officialwebsite.action.OwServiceUploadImgsBackAction" method="uploadServiceImgs">
+			<!-- 更新 -->
+			<interceptor-ref name="fileUpload">
+				<!--配置允许上传文件的扩展名,如果有多个用","隔开  -->  
+	            <param name="fileUpload.allowedExtensions">png,jpeg,jpg,gif</param>  
+				<!-- 文件大小, 以字节为单位 -->
+				<param name="maximumSize">1025956</param>
+			</interceptor-ref>
+			<!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+			<interceptor-ref name="owBackInterceptorStack"/>
+			<!-- 定义一个局部一场处理 -->
+			<exception-mapping exception="java.lang.Exception" result="exception"/>
+			<result name="exception" type="chain">erorrsAction!uploadError</result>
+		</action>
+		<!-- 异常处理接口 -->
+		<action name="erorrsAction!*" method="{1}" class="com.st.back.action.ErorrsAction">
+			
+		</action>
+		
+	</package>
+</struts>

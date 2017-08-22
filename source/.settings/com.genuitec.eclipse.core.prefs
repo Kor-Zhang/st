@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/main/resources/spring-hibernate.xml,src/main/webapp/jslib/cars/jquery-1.11.2.min.js,src/main/webapp/admins/qxgl_managepowerdialog.jsp,src/main/webapp/jslib/jquery-easyui-1.4.1/jquery.min.js,src/main/webapp/jslib/jquery-1.11.2.min.js,src/main/webapp/csslib/cars/jquery-1.11.2.min.js,src/test
+validator.Unchecked=

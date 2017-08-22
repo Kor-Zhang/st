@@ -1,0 +1,87 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: black;
+	font-family: "Microsoft YaHei";
+	margin: 0px 0px;
+	padding: 0px 0px;
+	/* 防止被选中 */
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+	/* 防止调整窗口大小时，js会因为滚轴的存在而无法准确的计算window的width */
+	overflow: hidden;
+}
+
+/**************消息页面***************/
+#msgModel{
+	width: 100%;
+	height: 100%;
+	z-index: 999px;
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 250px;
+	/* 默认隐藏显示 */
+	display: none;
+}
+#msgModel *{
+	color: white;
+}
+#msgModel>#closeBtn{
+	position: fixed;
+	top: 20PX;
+	right: 20PX;
+	cursor: pointer;
+	font-size: 50PX;
+	color: gray;
+}
+#msgModel>#closeBtn:hover{
+	
+	color: white;
+}
+#msgModel>#title{
+	font-size: 50px;
+}
+#msgModel>#msg{
+	margin-top:40px;
+	font-size: 20px;
+}
+
+/*****************************************************响应式*****************************************************/
+/* x<=767的设备 */
+@media screen and (max-width : 767px) { 
+	
+	/******************消息页面*****************/
+}
+/* 991>=x>=768的设备 */
+@media screen and ( min-width : 768px) and (max-width : 991px) { 
+	
+	/******************消息页面*****************/
+}
+
+
+/* 1199>=x>=992的设备 */
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	
+	/******************消息页面*****************/
+}
+
+
+
+/* x>=1200的设备 */
+@media screen and ( min-width : 1200px) {
+	/******************消息页面*****************/
+	
+}
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 配置后台管理模块需要继承的包 -->
+	<package name="backPackage" namespace="/back" extends="basePackage">
+		<interceptors> 
+			<!-- 管理员在线状态拦截器 -->
+			<interceptor name="adminOnlineInterceptor" class="com.st.back.interceptor.AdminOnlineInterceptor"/>
+			
+			<!-- 配置栈 -->
+			<interceptor-stack name="backInterceptorStack">
+				<!--配置内建默认拦截器-->
+				<interceptor-ref name="baseInterceptorStack" />
+				<!--配置自定义拦截器-->
+				<!-- 检测管理员是否在线 -->
+				<interceptor-ref name="adminOnlineInterceptor">
+					<!-- 不需要检测是否用户在线的方法 -->
+					<param name="excludeMethods">
+						adminLogin,getTree,
+						adminLogoff,repair*,
+						uploadNewsTextImg,getNewsTextImgByImgName,
+						uploadServiceTextImg,getServiceTextImgByImgName
+					</param>
+				</interceptor-ref>
+				
+				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="backInterceptorStack"></default-interceptor-ref>
+	</package>
+	
+	<!-- struts-back-admins.xml模块配置文件 -->
+    <include file="struts-back-admins.xml"></include> 
+    
+	<!-- struts-back-officialwebsite.xml模块配置文件 -->
+    <include file="struts-back-officialwebsite.xml"></include> 
+</struts>

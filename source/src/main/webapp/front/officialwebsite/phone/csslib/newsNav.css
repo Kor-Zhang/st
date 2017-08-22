@@ -1,0 +1,122 @@
+
+
+/******************底部信息导航*****************/
+#newsNav{
+	/* position: absolute;
+	bottom: 0px;
+	right:0px; */
+	width:100%;
+	background: rgba(18,18,18,0.0);
+	cursor: pointer;
+}
+#newsNav>div{
+	/* float: left; */
+	cursor: pointer;
+}
+/**新闻提示**/
+#newsTip{
+	
+	width:100%;
+	height:100%;
+	/*background: rgb(18,18,18); */
+	background:white;
+	
+	color:black;
+	font-size:25px;
+	text-align:center;
+	cursor: pointer;
+	line-height: 35px;
+}
+/**新闻列表**/
+#newsItemsList{
+	/* position: relative;
+	top:60px; */
+	width:100%;
+	height:100%;
+	background: rgb(18,18,18);
+}
+.newsItems{
+	display: block;
+	width:100%;
+	height:50px;
+	background: rgb(18,18,18);
+	border-bottom: 1px solid white;
+	line-height:60px;
+	text-align:center;
+	cursor: pointer;
+	font-weight: lighter;
+	text-decoration: none;
+}
+.newsItems>span{
+	display: block;
+	height:100%;
+}
+.newsItems *{
+	color:white;
+}
+
+
+.newsItems>.newsDate{
+	float: right;
+	font-size:15px;
+	width:30%;
+	overflow: hidden;
+}
+.newsItems>.newsTitle{
+	float: left;
+	font-size:19px;
+	width:70%;
+	overflow: hidden;
+}
+
+/* .newsItems>.newsImg{
+	float: right;
+	border: 3px solid white;
+	border-radius:2px;
+	width:20%;
+}
+.newsImg>img{
+	width:100%;
+	height:100%;
+} */
+
+
+/*****************************************************响应式*****************************************************/
+/* x<=767的设备 */
+@media screen and (max-width : 767px) { 
+	
+	/******************底部信息导航*****************/
+
+}
+/* 991>=x>=768的设备 */
+@media screen and ( min-width : 768px) and (max-width : 991px) { 
+	
+	/******************底部信息导航*****************/
+	/* #newsTip{
+		font-size:21px;
+	}
+	.newsItems>.newsDate{
+	
+		font-size:18px;
+	}
+	.newsItems>.newsTitle{
+		font-size:16px;
+	} */
+}
+
+
+/* 1199>=x>=992的设备 */
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	
+	/******************底部信息导航*****************/
+	
+}
+
+
+
+/* x>=1200的设备 */
+@media screen and ( min-width : 1200px) {
+	/******************底部信息导航*****************/
+	
+
+}
