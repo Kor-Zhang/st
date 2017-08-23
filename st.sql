@@ -1,4 +1,4 @@
-/*
+﻿/*
 Navicat MySQL Data Transfer
 
 Source Server         : COCO
@@ -8,7 +8,7 @@ Source Database       : st
 
 Target Server Type    : MYSQL
 Target Server Version : 60011
-File Encoding         : 65001
+File Encoding         : 65001 
 
 Date: 2016-10-13 15:22:46
 */
